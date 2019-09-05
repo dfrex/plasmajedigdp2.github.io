@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta property="og:title" content="PlasmaJEDI - University of Southampton"/>
+	<meta property="og:image" content="images/og_image.png"/>  
+	<meta property="og:description" content="We are PlasmaJEDI"/>  
+	
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="CSS/page_style.css">
+	<link rel="stylesheet" href="CSS/navbar_style.css">
+	<link rel="stylesheet" href="CSS/footer_style.css">
+	<link rel="stylesheet" href="CSS/box_style.css">
+	
+	<title>PlasmaJEDI</title>
+</head>
+
+<!--Navigation Bar-->
+<div w3-include-html="navigation/navbar.html"></div>
+
+<main>
+	<!--PlasmaJEDI Splash-->
+	<div class="splash">
+		<img src="images/plasmajedi.svg" alt="PlasmaJEDI">
+	</div>
+	
+	<!--Box Row 1-->
+	<div class="box-row">
+		<ul class="shadow-box">
+			<h class="text-head">
+				Overview
+			</h>
+			<p class="text-body">
+				We are Plasma JEDI, a group of six masters students studying aeronautics and astronautics engineering at the University of Southampton.
+				<br><br>
+				We are designing and building a <b>handheld non-thermal plasma jet emitter</b> for sterilisation purposes on space missions. Various scientific research has shown that non-thermal plasma can be used to decompose toxic chemicals, kill cancer cells and sterilise wounds, among other medical applications.
+				<br><br>
+				If we succeed in this project, we will be able to create a portable non-thermal plasma source using just air, eliminating the need for any additional chemicals or heat. This would be a huge step towards the viable use of such a device in a spaceship environment.
+				<br><br>
+				The aim for the project is to be able to generate a cold plasma jet that is at least 5cm long, from a device that is about the same size as a lightsaber.
+			</p>
+		</ul>
+		<ul class="shadow-box">
+			<img class="image-body" src="https://i.imgur.com/L1aubbN.jpg" alt="Nozzle Render">
+		</ul>
+	</div>
+	
+	<!--Box Row 2-->
+	<div class="box-row">
+		<ul class="shadow-box">
+			<img class="image-body" src="https://i.imgur.com/iTNv4x4.jpg" alt="UoS Campus">
+		</ul>
+		<ul class="shadow-box">
+			<h class="text-head">
+				Measuring Success
+			</h>
+			<p class="text-body">
+				Over the course of our degrees, we have build up the skills and knowledge required to design, manufacture and test a device such as this, as well as simulate the principle mechanics behind its operation and measure how well it performs compared to current plasma jet equipment.
+				<br><br>
+				Studying in Southampton gives us the great opportunity to test our device in the university's recently refurbished propulsion lab. With the help of available image spectroscopy and slow motion cameras, we will be able to analyse the composition and flow of the jet to determine performance characteristics and areas to improve on the design.
+				<br><br>
+				We are also taking advantage of the close proximity we have to Southampton General Hospital, who have the facilities to test samples of material that have been exposed to the jet, giving us a unique insight into how different tissues react to cold plasma.
+			</p>
+
+		</ul>
+	</div>
+	
+	<!--Box Row 3-->
+	<div class="box-row">
+		<ul class="shadow-box">
+			<h class="text-head">
+				Design Show 2019
+			</h>
+			<p class="text-body">
+				We are excited to be attending the University of Southampton's Engineering Design Show this year, which will enable us to showcase our project to other students, staff and members of the public.
+				<br><br>
+				If you are interested in attending or just curious about previous projects that have been showcased at the design show, please feel free to follow the links below:
+				<br><br>
+				<a href="http://uosdesign.org/designshow2018/">Design Show 2018 Website</a>
+				<br><br>
+				<a href="https://www.southampton.ac.uk/news/events/2017/06/15-design-show.page">Design Show 2019 Event Page</a>
+			</p>
+		</ul>
+		<ul class="shadow-box">
+			<img class="image-body" src="https://i.imgur.com/tvQln9K.jpg" alt="Design Show 2018">
+		</ul>
+	</div>
+</main>
+
+<!--Footer-->
+<div w3-include-html="navigation/footer.html"></div>
+
+<!--Include Script-->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+
+includeHTML();
+</script>
+
+</html>

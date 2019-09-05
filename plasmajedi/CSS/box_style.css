@@ -1,0 +1,162 @@
+@charset "utf-8";
+/*Box Stylesheet*/
+
+@font-face
+{
+    font-family: 'roboto';
+    src: url(/fonts/roboto.ttf);
+}
+
+/*//////////////////////////////////////////////////////////////////// Box Styles*/
+/*Shadow Box*/
+.shadow-box
+{
+	font-family: roboto;
+	
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	
+	width: 600px;
+	height: 350px;
+	
+	padding-left: 0;
+	margin-bottom: 14px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	font-size: 0px;
+	
+	overflow: hidden;
+	
+	background-color: white;
+	box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
+}
+
+/*Shadow Box Stretch*/
+.shadow-box-stretch
+{
+	font-family: roboto;
+	
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	
+	width: 55%;
+	
+	padding-left: 0;
+	margin-bottom: 14px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	font-size: 0px;
+	
+	overflow: hidden;
+	
+	background-color: white;
+	box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
+}
+
+/*Clear Box*/
+.clear-box
+{
+	font-family: roboto;
+	
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	
+	width: 60%;
+	height: auto;
+	
+	padding-left: 0;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	overflow: hidden;
+	
+	font-size: 0px;
+	
+	background-color: none;
+}
+
+/*Placeholder Box*/
+.placeholder-box
+{
+	font-family: roboto;
+	
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	
+	width: 600px;
+	height: 350px;
+	
+	padding-left: 0;
+	margin-bottom: 14px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	font-size: 0px;
+	
+	overflow: hidden;
+	
+	background-color: none;
+}
+
+/*//////////////////////////////////////////////////////////////////// Images In Boxes*/
+/*Image Body*/
+.image-body
+{
+	width: 600px;
+	height: 350px;
+	object-fit: cover;
+}
+
+/*Image Stretch*/
+.image-stretch
+{
+	width: 100%;
+	object-fit: contain;
+}
+
+/*//////////////////////////////////////////////////////////////////// Device Settings*/
+/*Tablet*/
+@media screen and (max-width: 800px)
+{
+	.shadow-box
+	{	
+		width: 100%;
+		height: auto;
+	}
+	
+	.shadow-box-stretch
+	{
+	
+		width: 75%;
+	}
+	
+	.clear-box
+	{	
+		width: 80%;
+		height: auto;
+	}
+	
+	.placeholder-box
+	{
+		width: 80%;
+		height: 1px;
+	}
+	
+	.image-body
+	{
+		width: 100%;
+		height: auto;
+	}
+}
+
+/*Mobile*/
+@media screen and (max-width: 500px)
+{
+	
+}

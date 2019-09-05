@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*General Page Stylesheet*/
+
+@font-face
+{
+    font-family: 'roboto';
+    src: url(/fonts/roboto.ttf);
+}
+
+/*//////////////////////////////////////////////////////////////////// Index Page*/
+/*PlasmaJEDI Splash*/
+.splash
+{
+	padding-top: 13%;
+	padding-bottom: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+/*Row of text/image boxes*/
+.box-row
+{
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+/*//////////////////////////////////////////////////////////////////// Gallery Page*/
+/*Row of image boxes in the gallery*/
+.gallery-row
+{
+	font-family: roboto;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+/*Content line break in the gallery*/
+.gallery-line
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: 10px;
+	border-top: 1px solid #000000;
+	opacity: .3;
+}
+
+/*//////////////////////////////////////////////////////////////////// Sponsor Page*/
+/*Row of image boxes on the sponsor page*/
+
+.sponsor-row
+{
+	font-family: roboto;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+/*//////////////////////////////////////////////////////////////////// Text Attributes*/
+/*Text Header*/
+.text-head
+{
+	display: block;
+	text-align: left;
+	
+	margin-top: 0;
+	
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	font-size: 24px;
+	font-weight: 400;
+}
+
+/*Text Body*/
+.text-body
+{
+	text-align: justify;
+	
+	margin-top: 0;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.text-body a
+{
+	color: black;
+	font-size: 16px;
+}
+
+.text-list
+{
+	text-align: left;
+	
+	margin-top: 0;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 15px;
+	
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/*//////////////////////////////////////////////////////////////////// Device Settings*/
+/*Tablet*/
+@media screen and (max-width: 800px)
+{
+	body
+	{
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.box-row
+	{
+		text-align: center;
+		margin-bottom: 0px;
+		margin-right: 10px;
+	}
+	
+	.gallery-row
+	{
+		margin-right: 10px;
+	}
+	
+	.sponsor-row
+	{
+		margin-right: 10px;
+	}
+	
+	.text-body
+	{
+		font-size: 14px;
+	}
+	
+	.text-head
+	{
+		font-size: 20px;
+		font-weight: 400;
+	}
+	
+	.text-list
+	{
+		font-size: 14px;
+	}
+}
+
+/*Mobile*/
+@media screen and (max-width: 500px)
+{
+	
+}

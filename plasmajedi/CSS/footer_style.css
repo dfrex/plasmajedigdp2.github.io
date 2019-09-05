@@ -1,0 +1,66 @@
+@charset "utf-8";
+/*Footer Stylesheet*/
+
+@font-face
+{
+    font-family: 'roboto';
+    src: url(/fonts/roboto.ttf);
+}
+
+foot
+{
+	font-family: roboto;
+	
+	position: bottom;
+	text-align: center;
+	
+	display: block;
+}
+
+.foot-box
+{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	
+	list-style: none;
+	
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.foot-box a
+{
+	color: #000000;
+	font-size: 16px;
+}
+
+.foot-line
+{
+	font-size: 10px;
+	width: 65%;
+	border-top: 1px solid #000000;
+	opacity: .3;
+}
+
+/*//////////////////////////////////////////////////////////////////// Device Settings*/
+/*Tablet*/
+@media screen and (max-width: 800px)
+{
+	.foot-box
+	{
+		text-align: center;
+		display: block;
+	}
+	
+	.text-head-footer
+	{
+		font-weight: 600;
+	}
+}
+
+/*Mobile*/
+@media screen and (max-width: 500px)
+{
+	
+}
